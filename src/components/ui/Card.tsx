@@ -1,3 +1,4 @@
+// src/components/ui/Card.tsx
 import React from 'react';
 
 interface CardProps {
@@ -20,7 +21,7 @@ export const Card: React.FC<CardProps> = ({
 
   return (
     <div
-      className={`bg-white rounded-lg shadow-sm border border-gray-200 ${paddingClasses[padding]} ${className}`}
+      className={`bg-white rounded-2xl shadow-sm border border-gray-100 ${paddingClasses[padding]} ${className}`}
     >
       {children}
     </div>

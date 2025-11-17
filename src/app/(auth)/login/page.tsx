@@ -1,3 +1,4 @@
+// src/app/(auth)/login/page.tsx
 'use client';
 
 import { useState } from 'react';
@@ -17,7 +18,6 @@ export default function LoginPage() {
     e.preventDefault();
     setIsLoading(true);
 
-    // Simulate API call
     setTimeout(() => {
       login({
         id: '1',
@@ -32,14 +32,23 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-500 to-secondary-600 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">AutoFlow</h1>
-          <p className="text-gray-600">Sign in to your account</p>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center p-4">
+      <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md">
+        {/* Logo */}
+        <div className="flex justify-center mb-8">
+          <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+            <span className="text-white font-bold text-3xl">A</span>
+          </div>
         </div>
 
-        <form onSubmit={handleLogin} className="space-y-6">
+        {/* Title */}
+        <div className="text-center mb-8">
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Welcome Back</h1>
+          <p className="text-gray-600">Sign in to AutoFlow</p>
+        </div>
+
+        {/* Form */}
+        <form onSubmit={handleLogin} className="space-y-5">
           <Input
             label="Email Address"
             type="email"
@@ -58,9 +67,19 @@ export default function LoginPage() {
             required
           />
 
+          <div className="flex items-center justify-between text-sm">
+            <label className="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" className="w-4 h-4 text-blue-600 rounded" />
+              <span className="text-gray-600">Remember me</span>
+            </label>
+            <a href="#" className="text-blue-600 hover:text-blue-700 font-medium">
+              Forgot password?
+            </a>
+          </div>
+
           <Button
             type="submit"
-            className="w-full"
+            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
             size="lg"
             isLoading={isLoading}
           >
@@ -70,7 +89,7 @@ export default function LoginPage() {
 
         <p className="mt-6 text-center text-sm text-gray-600">
           Don't have an account?{' '}
-          <a href="/register" className="text-primary-600 font-medium hover:underline">
+          <a href="/register" className="text-blue-600 font-semibold hover:text-blue-700">
             Sign up
           </a>
         </p>
