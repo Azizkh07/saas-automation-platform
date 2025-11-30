@@ -21,7 +21,7 @@ export const Button: React.FC<ButtonProps> = ({
   const variants = {
     primary: 'bg-blue-600 hover:bg-blue-700 text-white shadow-sm hover:shadow-md',
     secondary: 'bg-gray-100 hover:bg-gray-200 text-gray-900',
-    danger: 'bg-red-600 hover:bg-red-700 text-white',
+  danger: 'bg-red-600 hover:bg-red-700 text-white shadow-sm',  // ← AJOUTEZ CETTE LIGNE
     ghost: 'bg-transparent hover:bg-gray-100 text-gray-700',
   };
 
