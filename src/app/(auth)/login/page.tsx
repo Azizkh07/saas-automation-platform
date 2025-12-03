@@ -22,7 +22,7 @@ export default function LoginPage() {
       login({
         id: '1',
         email,
-        name: 'Aziz Khan',
+        name: 'Admin',
         role: 'admin',
         createdAt: new Date().toISOString(),
       });
@@ -36,15 +36,19 @@ export default function LoginPage() {
       <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md">
         {/* Logo */}
         <div className="flex justify-center mb-8">
-          <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
-            <span className="text-white font-bold text-3xl">A</span>
+          <div className="w-20 h-20 rounded-2xl overflow-hidden flex items-center justify-center">
+            <img 
+              src="/images/logo.png" 
+              alt="Flow-Builder Logo" 
+              className="w-full h-full object-contain"
+            />
           </div>
         </div>
 
         {/* Title */}
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Welcome Back</h1>
-          <p className="text-gray-600">Sign in to AutoFlow</p>
+          <p className="text-gray-600">Sign in to Flow-Builder</p>
         </div>
 
         {/* Form */}

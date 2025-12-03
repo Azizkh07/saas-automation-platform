@@ -29,10 +29,17 @@ export function Sidebar() {
       {/* Logo */}
       <div className="p-6 border-b border-gray-200">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
-            <span className="text-white font-bold text-xl">A</span>
+          <div className="w-10 h-10 rounded-xl overflow-hidden flex items-center justify-center">
+            <img 
+              src="/images/logo.png" 
+              alt="Flow-Builder Logo" 
+              className="w-full h-full object-contain"
+            />
           </div>
-          <span className="text-xl font-bold text-gray-900">AutoFlow</span>
+          <div>
+            <span className="text-xl font-bold text-gray-900">Flow-Builder</span>
+            <p className="text-xs text-gray-500">Automation Platform</p>
+          </div>
         </div>
       </div>
 
